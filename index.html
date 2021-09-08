@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <article>
+        <pre>
+
+        page1 {Title Page of Project}*1
+page2 {College Certificate}
+page3 {Acknowledgement}
+page4 {Introduction To The Project }
+(Introduction to a project 
+
+
+Transport is an integral part of our social living.  The modern society cannot run without   transport   facilities.   There are   many   companies  who   give   transport services   to  the   individual   and   corporate clients.  In   the   EID   system,  the EID is an online platform in which client can use it as tool to communicate with drivers which will help the user to get them to there specified location and same applies for the driver where driver will get an interface where he/she will be specifying there future traveling plan and if any user is interested to join them and give driver a certain fare and through  this both the parties can get there job done  and will facilitate both the client and the company with reduced time, efforts,money . First the company will register his vehicles and the vehicles to the system. Then the client   will   request   for   booking   a   vehicle   on   his   required   date   and   time, providing   all   necessary   information.   The   fare   will   be   calculated by the driver   and   client should confirm or bargain  or reject the offer  . Then the employee will serve the client on the specific date and time.)
+page5 {Index }
+page6 {Project Profile}
+page7 {Definition}
+(
+    
+Definition
+
+In   the   EID   system,  the EID is an online platform in which client can use it as tool to communicate with drivers which will help the user to get them to there specified location and same applies for the driver where driver will get an interface where he/she will be specifying there future traveling plan and if any user is interested to join them and give driver a certain fare and through  this both the parties can get there job done  and will facilitate both the client and the company with reduced time, efforts,money .
+
+)
+page8{Scope Of Work}
+(
+    Scope Of Work
+
+The main aim of the proposed system is to reduce the redudancy avilable in the current system and this project’s aim is to automate the system, collecting all necessary information of the client and then serve the client. The data used by the system is stored in a database that will be the   center  of all information held clients and employees and the base for the remainder of the process after the initial application has been made. This enables things to be simplified and considerably quickened, making the jobs of the people involved easier. It supports the current process but centralizes it and makes it possible for decisions to be made earlier and easier way
+
+)
+page9{An Existing System}
+(
+    An Existing System
+
+
+
+
+A transportation system can be defined as the combination of elements and their interactions, which produce the demand for travel within a given area and the supply of transportation services to satisfy this demand. This definition is general and flexible enough to be applied to different contexts
+
+
+
+)
+page10{Problem faced in current manual system}
+(
+    PROBLEM PHASE IN CURRENT MANUAL SYSTEM
+
+There are many problem in existing system 
+
+    ·	Public Transportation
+    o	More Crowded Place
+    o	Delay in time 
+    o	lack of sanitation
+    o	Flow of passengers is higher during rush hours
+    o	misuse of  reservation  seats
+    o	Risk due to unhealthy competition
+    o	Not reaching to destinations
+    o	Majority  traveling with strangers
+    o	time consuming
+    o	Luggage insecurity
+
+    ·	Private Transportation
+    o	Cost of private transportation is much higher comparing to shared or public transportation
+    o	Lack of communication issue
+    o	Safety & security is also an issue- you have to depend on the driving skill set of unknown
+    o	Behavior & tuning with transporter, driver or any other middleman
+
+    ·	Own Vehicle
+    o	Fuel hike
+    o	Parking Problem
+    o	Non proper Rode
+)
+page11{AIMS & OBJECTIVE TO BE FULFILLED }
+(
+    AIMS & OBJECTIVE TO BE FULFILLED
+
+·	Environment Healthy
+·	Less rushing 
+·	Better communication
+·	Speedy Things Up
+·	Encouraging positive impacts through its activities.
+·	Save money,time,and effort
+·	Honor the spirit of law and be a responsible corporate citizen.
+·	It offers better services in terms of speed, accuracy and efficiency.
+·	Right Security
+·	Strive for Sustainable development for economic growth.
+·	Positively impact the society at large with minimal resource footprint.
+·	Time saving 
+·	Proper Infromation
+·	Adopt an approach that aims at achieving a greater balance between social and economic development.
+·	Creating shared prosperity, sustainable for the Company’s actions.
+·	Enhance and implement the society welfare measures in a well-structured manner on short as well as long term basis with a vision of making the Company a Good Corporate Citizen
+)
+page12{Need of proposed System}
+(
+    ·	Ride Without Peak Pricing. 
+·	Skip Booking Queue. 
+·	No Parking Problem
+·	No More Crowded Place
+·	No Delay in time 
+·	Proper sanitation
+·	No misuse of  reservation  seats
+·	Healthy competition
+·	Guarantee reaching to destinations
+·	Proper way to manage ride
+·	Better way of Payment Method
+
+
+)
+page13{SYSTEM FEATURES}
+(
+    SYSTEM FEATURES
+Features provided to the EID are as Follows
+
+* User can login with email and password
+
+  * Plain text password will compare with stored hashed password
+
+
+- Get user
+  * Route to get the currently logged in user 
+
+
+- Password reset (lost password)
+  * User can request to reset password
+  * A hashed token will be emailed to the users registered 
+email address
+  * A put request can be made to the generated url to reset password
+
+
+- Update user info
+  * Authenticated user only
+  * Separate route to update password
+
+
+
+### Driver
+- List all Drivers in the database
+   * Pagination
+   * Select specific fields in result
+   * Limit number of results
+   * Filter by fields
+- Search Drivers by radius from zipcode
+  * Use a geocoder to get exact location and coords from a 
+single  address field
+- Get single Driver
+- Be a Driver
+  * Authenticated users only
+  * Must have the role "Driver" or "admin"
+  * Field validation via Mongoose
+  * validate via Joi
+
+
+- Update Driver Profle
+  * Driver only
+  * Validation on update
+
+
+
+- Delete Profile
+  * Driver  only
+- Calculate the total rides complited by an driver
+- Calculate the average rating from the reviews for a Driver
+
+
+
+
+### Rides By Driver
+- List all Rides Avilable
+- List all Rides in general
+  * Pagination, filtering, etc
+- Create new Ride
+  * Authenticated users only
+  * Must have the role "Driver" or "admin"
+  * Only the Driver or an admin can create a Ride
+  * Driver can create multiple Rides
+- Update Ride
+  * Owner only
+- Delete course
+  * Owner only
+  
+
+
+### Reviews
+- List all reviews for a Driver
+- List all reviews in general
+  * Pagination, filtering, etc
+- Get a single review
+- Create a review
+  * Authenticated users only
+  * Must have the role "Driver" or "admin" (no publishers)
+- Update review
+  * Owner only
+- Delete review
+  * Owner only
+- User registration
+  * Register as a "Driver" or "User"
+  * Passwords must be hashed
+- User login
+  
+
+
+## Security
+- Encrypt passwords and reset tokens
+- Prevent cross site scripting - XSS
+- Prevent NoSQL injections
+- Add a rate limit for requests of 100 requests per 
+10 minutes
+- Protect against http param polution
+
+
+
+## Deployment (Digital Ocean)
+- Push to Github
+-Domain given By Heroku (free)
+-Database in Mongo DB atlas (free)
+
+Extra Features
+
+=> Newsletters
+=> Devloprs Portfoilios
+=> Emails
+=> New Updates
+=> Proper Documentation
+=> No Ads
+=> Security Of Data
+
+
+)
+page14{Proposed system}
+(
+    Proposed system
+EID’s mission is to make transportation reliable and easy. They work  with complex data, high traffic, and complex systems, all bundled up in  their phone . EID enables drives to book drivers  for clients. Eid drivers use personal cars or borrowed car registered in the fill up form , and both customers  and drivers communicate using the EId software.
+There are two kinds of users that our system should account for: Drivers and Customers.
+·	Drivers must be able to frequently notify the service regarding their current location and availability
+·	Passengers should be able to see all nearby drivers in real-time
+·	Customers can request a ride using a destination and pickup time.
+·	Nearby drivers are then notified when a customer needs pick up.
+·	Once a ride is accepted, both the driver and customer must constantly see the other’s current location the duration of the trip.
+·	One the drive is complited feedback is show to them
+
+
+
+)
+page15{Advantages of Proposed System}
+(
+    Computerizing  the  current  system  with  the  help  of  new  software  with  help  of  new 
+software provide following advantages: 
+·	  Due to advance technology faster computer means more speedy work. 
+·	  As the computers are highly accurate, accuracy in work is increased. 
+·	 Storage of large volume of data is facilitated due to high storage capacity of computers. 
+·	Decrease the load of the person involved in existing system due to automation of task. 
+·	  Updating of information is easily. 
+·	  Access any information individual.
+·	  Easy and fast retrieval of information. 
+·	  Because of related database provide by NoSQL , the data will be consistent. 
+·	  Overall time is saved and activities can be performed in parallel.
+
+)
+page16{Some of the Brief Better features of the proposed system are given below: }
+(
+     ·	Removal of Data Redundancy 
+     ·	 Data Consistency 
+     ·	Data Security 
+     ·	 Help in storing and retrieving records
+
+     
+
+Removal of Data Redundancy 
+
+Due to the non relational database there is no interconnection between them so there is less processing going in between then and data is stored in Json Format so it is easy to transfer and quick transfr of data and there is primary key ID which is unique and references are thee in field which makes data les redudand This will cause easy data recording and low time consuming. 
+
+
+
+
+Data Security 
+
+MongoDB Atlas makes it easy to control access to your database. Your  database instances are deployed in a unique Virtual Private Cloud (VPC)  to ensure network isolation. Other security features include IP  whitelisting or VPC Peering, always-on authentication, encryption at  rest and encryption in transit, sophisticated role-based access  management, and more.
+
+
+
+
+
+
+
+Always on and durable
+
+With MongoDB Atlas, your self-healing clusters are made up of geographically distributed database instances to ensure no single point of failure. Want even better availability guarantees? Get multi-region fault tolerance by enabling cross-region replication. MongoDB Atlas also includes powerful features to enhance reliability for your mission-critical production databases, such as continuous backups and point-in-time recovery.
+
+
+
+
+
+Fully automated and elastic
+
+MongoDB Atlas automates infrastructure provisioning, setup, and deployment so your teams can get the database resources they need, when they need them. Patches and minor version upgrades are applied automatically. And when you need to modify your cluster — whether it’s to scale out or perform an upgrade — MongoDB Atlas lets you do so in a few clicks with no downtime window required.
+
+
+
+)
+page17{Hardware Software}
+(
+    Hardware Software
+
+
+
+
+
+
+
+
+
+Hardware
+
+
+The recommended hardware specified by the respective software would suffice the needs. The memory and processing power needed would increase as the number of users increase. The estimated hardware requirements are as specified.
+(Recommended)
+=> 4gb Ram or higher
+
+=> 20 gb Storage or higher
+
+=> processor i3 or higher in intel , ryzen3 or higher , Mac any
+
+=> screen size 11inch or higher
+
+=>  Windows / Linux / mac Operating System
+
+
+
+
+
+
+
+
+Software
+
+ => Latest Browser 
+ => Visual studio code
+ => post man
+ => NPM
+ => mongoDB
+ => Nodemon
+ => express
+ => Joi
+ => Node
+ => MongoDB Compass
+
+Client
+The minimum hardware as recommended by all of the software required on 
+client side say web browser, operating system
+=>  A Computer , Laptop  Or Mobile Phone
+=> Fast Internet Connection
+
+
+
+Server
+The minimum hardware as recommended by all of the software required on
+server side say web server, operating system and development software
+Tools used there will be online 
+..Mongo DB atlas (Database) the free tier will be of 512 MB which is 
+capable for storing data of 5000 or higher
+
+)
+page18{ Limitations}
+(
+·	The  Limitations of this software is its browser based
+·	The Data supported is only of 512 MB
+·	 big reads of data big data, bit we don’t need to do 100 joins to find the derived data set we want 
+)
+page19{security}
+(
+    Security
+Security Requirements 
+Some of the factors that are identified to protect the software from accidental or
+malicious   access,   use,   modification,   destruction,   or   disclosure   are   described
+below. Specific requirements in this area could include the need to: 
+ Utilize certain cryptographic techniques 
+ Keep specific log or history data sets 
+ Assign certain functions to different modules 
+ Restrict communications between some areas of the program 
+ Check data integrity for critical variables 
+ Later version of the software will incorporate encryption techniques in
+the user/license authentication process. 
+ The software will include an error tracking log that will help the user
+understand what error occurred when the application crashed along with
+suggestions on how to prevent the error from occurring again. 
+·	 Communication needs to be restricted when the application is validating
+the user or license. (i.e., using https)
+
+
+More security
+·	 Encrypt passwords and reset tokens
+·	 Prevent cross site scripting - XSS
+·	 Prevent NoSQL injections
+·	 Add a rate limit for requests of 100 requests per 
+      10 minutes
+·	 Protect against http param polution
+·	 Fields validation through Joi
+·	 Database modeling
+·	 multilevel security
+·	 middlewares in express
+·	 use of helmet
+
+)
+page20{Technical terms}
+(
+EID =  Everyone is a Driver
+EJS =   Embedded Javascript Templating
+JSON = javascript object notation
+)
+
+page21{}
+(
+    CONCLUSION
+Information Technology plays a vital role not only in a particular field, it 
+provides various kinds of solutions and services to the various problems 
+prevailing in many fields. Drives exploit information technology at the 
+maximum extent. It uses the information technology in an efficient way for 
+providing better passenger services. The online booking system helps to 
+solve the everyday problems of the world .
+
+)
+page22{Feasibility Study }
+(
+
+
+    The new system is to Be installed named as EID for reducing evryday hustel of traveling 
+    which will be having potential for handeling client request and drivers booking
+    and the software will be developed from scratch and may things will be embeded in the system 
+    after this tudy is conducted to:
+
+    1Verify that all tests are completed. 
+    2Evaluate factors such as quality, test coverage, timeline, and cost.
+    3Document the conclusion.
+    4Discuss the learning and find out if the testing process can be improved.
+    5Prepare test closure report. 
+    
+
+....Portability Requirements 
+Some of the attributes of software that relate to the ease of porting the software
+to other host machines and/or operating systems. This may include: 
+Apache is used to develop the product. So it is easiest to port the software in
+any environment. 
+....Maintainability 
+The user will be able to reset all options and all stored user variables to default
+settings. Reliability 
+Some of the attributes identified for the reliability is listed below: 
+ All data storage for user variables will be committed to the database at
+the time of entry. 
+ Data corruption is prevented by applying the possible backup procedures
+and techniques. Usability requirements 
+Some of the usability requirements identified for this system are listed below: 
+ A  logical  interface  is  essential  to  an  easy  to use  system,  speeding  up
+common tasks. 
+ Error prevention is integral to the system and is provided in a number of
+formats from sanity checks to limiting free-text input. 
+....Availability 
+All cached data will be rebuilt during every startup. There is no recovery of user
+data if it is lost. Default values of system data will be assigned when necessary. 
+Software System Attributes 
+There are a number of attributes of software that can serve as requirements. It is
+important that required attributes by specified so that their achievement can be
+objectively verified. The following items provide a partial list of examples. 
+The input system will allow for inputting numbers, operands, special symbols
+and letters of the alphabet
+
+)
+
+
+page23{Data Flow Diagram}/
+page23{OOAD }/
+
+
+page23{UML}
+(
+    ■ Top-down structured design
+    ■ Data-driven design
+    ■ Object-oriented design
+
+)
+
+page23{Database Layout}/
+
+
+page23{File Layout}
+(
+
+   Model–view–controller (usually known as MVC) is a software design patterncommonly used for developing user interfaces that divide the related program logic into three interconnected elements. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.
+    Traditionally used for desktop graphical user interfaces (GUIs), this pattern has become popular for designing web applications. Popular programming languages have MVC frameworks that facilitate implementation of the pattern.
+
+
+)
+
+
+page23{Design Of Input Screens} /
+page23{Design Of Output Screens & Reports} /
+
+
+
+page23{Testing Procedures & Implementation Phases }
+(
+    steps for testing is :
+    1Prepare test plan documentation.
+    2Estimate time and efforts.
+    3Finalize on tools and platform.
+    4Assign tasks to teams and individuals.
+    5Identify training requirements
+    6Research and gather possible actions on the product.
+    7Create test cases.
+    8Prioritize test cases.
+    9Prepare automated scripts for test cases
+    10Prioritize test environments
+    11Setup test environments
+)
+
+
+</pre>
+    </article>
+    </p>
+</body>
+</html>
